@@ -1,0 +1,213 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "writing-assistance",
+  "title": "Writing Assistance",
+  "description": "A powerful writing assistant powered by the OpenRouter API. Access a wide variety of LLMs for drafting, improving, and brainstorming.",
+  "icon": "assets/icon.png",
+  "author": "bensonkb",
+  "contributors": [
+    "ridemountainpig",
+    "d0zingcat",
+    "ViGeng",
+    "anwarulislam",
+    "DanielPFitzsimmons"
+  ],
+  "categories": [
+    "Productivity",
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "history",
+      "title": "Command History",
+      "subtitle": "Writing Assistance",
+      "description": "View your command history",
+      "mode": "view",
+      "icon": "gemini-icon.png"
+    },
+    {
+      "name": "askAI",
+      "title": "Ask",
+      "subtitle": "Writing Assistance",
+      "description": "Ask AI",
+      "mode": "view",
+      "icon": "gemini-icon.png",
+      "arguments": [
+        {
+          "name": "query",
+          "placeholder": "Query",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "aiChat",
+      "title": "Chat with AI",
+      "subtitle": "Writing Assistance",
+      "description": "Chat with AI",
+      "icon": "chat-icon.png",
+      "mode": "view"
+    },
+    {
+      "name": "askAboutScreen",
+      "title": "Ask About Screen Content",
+      "subtitle": "Writing Assistance",
+      "description": "Ask about what's on your screen",
+      "mode": "no-view",
+      "icon": "screen-icon.png",
+      "arguments": [
+        {
+          "name": "query",
+          "placeholder": "Query",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "askAboutSelectedScreen",
+      "title": "Ask About Selected Screen Area",
+      "subtitle": "Writing Assistance",
+      "description": "Ask about your selected screen area",
+      "mode": "no-view",
+      "icon": "screen-icon.png",
+      "arguments": [
+        {
+          "name": "query",
+          "placeholder": "Query",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "askAboutSelectedText",
+      "title": "Ask About Selected Text",
+      "subtitle": "Writing Assistance",
+      "description": "Ask about your selected text",
+      "mode": "view",
+      "icon": "clipboard-icon.png",
+      "arguments": [
+        {
+          "name": "query",
+          "placeholder": "Query",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "summarize",
+      "title": "Summarize",
+      "description": "Summarize text",
+      "icon": "summarize-icon.png",
+      "mode": "view"
+    },
+    {
+      "name": "explain",
+      "title": "Explain",
+      "description": "Explain text",
+      "icon": "explain-icon.png",
+      "mode": "view"
+    },
+    {
+      "name": "comment",
+      "title": "Add Comments to Code",
+      "description": "Add comments to code",
+      "icon": "code-icon.png",
+      "mode": "view"
+    },
+    {
+      "name": "friendly",
+      "title": "Change Tone to Friendly",
+      "icon": "text-icon.png",
+      "description": "Change tone of selected text to friendly",
+      "mode": "view"
+    },
+    {
+      "name": "professional",
+      "title": "Change Tone to Professional",
+      "icon": "text-icon.png",
+      "description": "Change tone of selected text to professional",
+      "mode": "view"
+    },
+    {
+      "name": "synonym",
+      "title": "Find Synonym",
+      "icon": "synonym-icon.png",
+      "description": "Find synonym of selected word",
+      "mode": "view"
+    },
+    {
+      "name": "grammar",
+      "title": "Fix Spelling and Grammar",
+      "icon": "grammar-icon.png",
+      "description": "Fix spelling and grammar of selected text",
+      "mode": "view"
+    },
+    {
+      "name": "longer",
+      "title": "Make Longer",
+      "icon": "longer-icon.png",
+      "description": "Make selected text longer",
+      "mode": "view"
+    },
+    {
+      "name": "shorter",
+      "title": "Make Shorter",
+      "icon": "shorten-icon.png",
+      "description": "Make selected text shorter",
+      "mode": "view"
+    },
+    {
+      "name": "translate",
+      "title": "Translate",
+      "icon": "translate-icon.png",
+      "description": "Translate selected text",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "TranslateLanguage",
+          "placeholder": "Translate Language",
+          "type": "text",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "openRouterApiKey",
+      "title": "OpenRouter API Key",
+      "description": "Your personal API key for OpenRouter.",
+      "type": "password",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.93.2",
+    "@raycast/utils": "^1.9.0",
+    "jimp": "^0.22.10",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "1.0.5",
+    "@types/node": "^20.8.10",
+    "@types/node-fetch": "^2.6.12",
+    "@types/react": "^18.2.27",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "react": "^18.2.0",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "pull": "ray pull-contributions",
+    "publish": "ray publish"
+  }
+}
